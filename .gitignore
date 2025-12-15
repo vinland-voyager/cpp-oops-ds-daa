@@ -3,3 +3,7 @@
 cmake-build-debug
 chk.c
 chkPP.cpp
+CMakeLists.txt
+chkPP
+chk
+main
