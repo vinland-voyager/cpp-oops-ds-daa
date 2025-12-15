@@ -1,4 +1,28 @@
-/* Problem 6: Functions -------------------------------
+/* Problem 6: Pointers -------------------------------
+
+#include <stdio.h>
+
+void update(int *a,int *b) {
+    // Complete this function
+    int sum = *a + *b;
+    int diff = (*a >= *b) ? *a - *b : *b - *a;
+    *a = sum;
+    *b = diff;
+}
+
+int main() {
+    int a, b;
+    int *pa = &a, *pb = &b;
+
+    scanf("%d %d", &a, &b);
+    update(pa, pb);
+    printf("%d\n%d", a, b);
+
+    return 0;
+}
+*/
+
+/* Problem 5: Functions -------------------------------
 
 #include <cstdio>
 using namespace std;
@@ -25,7 +49,7 @@ int max_of_four(int a, int b, int c, int d) {
 }
 */
 
-/* Problem 5: For Loop -------------------------------
+/* Problem 4: For Loop -------------------------------
 
 #include <iostream>
 using namespace std;
@@ -51,33 +75,6 @@ int main() {
             else if (n==8) cout << "eight" << endl;
             else if (n==9) cout << "nine" << endl;
         }
-    }
-    return 0;
-}
-*/
-
-/* Problem 4: Conditionals -------------------------------
-
-#include <iostream>
-using namespace std;
-
-int main()
-{
-    int n {0};
-    cin >> n;
-    if (n > 9 || n < 1) {
-        cout << "Greater than 9";
-    }
-    else {
-        if (n == 1) cout << "one";
-        else if (n==2) cout << "two";
-        else if (n==3) cout << "three";
-        else if (n==4) cout << "four";
-        else if (n==5) cout << "five";
-        else if (n==6) cout << "six";
-        else if (n==7) cout << "seven";
-        else if (n==8) cout << "eight";
-        else if (n==9) cout << "nine";
     }
     return 0;
 }
