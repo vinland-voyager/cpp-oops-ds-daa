@@ -1,3 +1,4 @@
+.gitignore
 .DS_STore
 .idea
 cmake-build-debug
