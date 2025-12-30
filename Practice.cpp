@@ -1,5 +1,59 @@
-/* Pointers -------------------------------
+/* Pointers & References -------------------------------
 
+// Multi-relations (Pointer to pointer & multi-level derefencing)
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a = 10;
+    int* p = &a;
+    int** pp =&p;
+    int*** ppp = &pp;
+    cout << a << endl
+    << p << '\t' << &p << '\t' << *p << endl
+    << pp << '\t' << &pp << '\t' << *pp << '\t' << **pp << endl
+    << ppp << '\t' << &ppp << '\t' << *ppp << '\t' << **ppp << '\t' << ***ppp << endl;
+    return 0;
+}
+
+// Dangling Reference
+#include <iostream>
+using namespace std;
+
+int& getNumber();
+
+int main() {
+    int y;
+    y = getNumber();
+    cout << sizeof(int) << endl <<sizeof(double);
+    return 0;
+}
+
+int& getNumber() {
+    int xyy = 4000;
+    return xyy;
+}
+
+// Basics of references
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a = 10;
+    int &r = a;
+    cout << a << '\t' << r << endl;
+    a = 9;
+    cout << a << '\t' << r << endl;
+    r = 7;
+    cout << a << '\t' << r << endl;
+    int b = 100;
+    int &r1 = b;
+    cout << a << '\t' << r << '\t' << b << endl;
+    cout << &a << '\t' << &r << '\t' << &b << endl;
+    return 0;
+}
+
+// nullptr with macro
 #include <iostream>
 using namespace std;
 #define NULL nullptr
@@ -13,7 +67,7 @@ int main() {
     cout << *p4 << endl; // It will still print the value stored at p2 but with the updated value.
     return 0;
 }
- */
+*/
 
 /* Uniform Initialization -------------------------------
 
