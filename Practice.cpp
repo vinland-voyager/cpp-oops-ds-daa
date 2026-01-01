@@ -1,4 +1,27 @@
-/* Pointers & References -------------------------------
+/* Pointers, References and Constants -------------------------------
+
+// const, const pointers
+#include <iostream>
+using namespace std;
+
+int main() {
+    const int a = 5;
+    int b = 10;
+    // a pointer ac to a constant integer -> Value can't be changed but pointer can be shifted to another address.
+    const int* ptr = &a;
+    // a constant pointer ace to an integer -> Value can be changed but pointer can NOT be shifted to another address.
+    int* const ptrconst = &b;
+    // a constant pointer acee to a constant integer -> Neither value nor the pointer address can be changed.
+    const int* const cptrc = &b;
+    *ptr = 11; // Value can't be changed for 'a'
+    ptr = &b; // Address can be changed for ptr
+    *ptr = 12; // Value still can't be changed, even though ptr now points to b
+    *ptrconst = 110; // Value can be changed for 'b' via ptrconst
+    ptrconst = &a; // Address can't be changed for ptrconst
+    cptrc = &b; // Address can't be changed for cptrc
+    *cptrc = 19; // Neither can value
+    return 0;
+}
 
 // Multi-relations (Pointer to pointer & multi-level derefencing)
 #include <iostream>
