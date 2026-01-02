@@ -1,3 +1,4 @@
+
 /* Problem 6: Pointers -------------------------------
 
 #include <stdio.h>
@@ -23,7 +24,6 @@ int main() {
 */
 
 /* Problem 5: Functions -------------------------------
-
 #include <cstdio>
 using namespace std;
 

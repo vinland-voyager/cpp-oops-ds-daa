@@ -1,6 +1,5 @@
-/* Pointers, References and Constants -------------------------------
 
-// const, const pointers
+/* const, const pointers
 #include <iostream>
 using namespace std;
 
@@ -22,8 +21,9 @@ int main() {
     *cptrc = 19; // Neither can value
     return 0;
 }
+*/
 
-// Multi-relations (Pointer to pointer & multi-level derefencing)
+/* Multi-relation pointers (Pointer to pointer & multi-level derefencing)
 #include <iostream>
 using namespace std;
 
@@ -38,8 +38,9 @@ int main() {
     << ppp << '\t' << &ppp << '\t' << *ppp << '\t' << **ppp << '\t' << ***ppp << endl;
     return 0;
 }
+*/
 
-// Dangling Reference
+/* Dangling Reference
 #include <iostream>
 using namespace std;
 
@@ -56,8 +57,9 @@ int& getNumber() {
     int xyy = 4000;
     return xyy;
 }
+*/
 
-// Basics of references
+/* Basics of references
 #include <iostream>
 using namespace std;
 
@@ -75,8 +77,9 @@ int main() {
     cout << &a << '\t' << &r << '\t' << &b << endl;
     return 0;
 }
+*/
 
-// nullptr with macro
+/* nullptr with macro
 #include <iostream>
 using namespace std;
 #define NULL nullptr
