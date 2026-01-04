@@ -1,3 +1,32 @@
+/* Practice function pointers, inline functions & function overloading
+
+#include <iostream>
+using namespace std;
+
+int Add(int a, int b) {
+    return a+b;
+}
+// Overloading
+double Add(double a, double b) {
+    return a+b;
+}
+// inline
+inline float Add(float a, float b) {
+    return a+b;
+}
+
+int main() {
+    int (*fptr1) (int a, int b) = &Add; // function pointer
+    double (*fptr2) (double a, double b) = &Add; // compiler will figure out the overloading even for function pointers.
+    float (*fptr3) (float a, float b) = &Add;
+
+    cout << fptr1(5,6) << endl; // invoke via function pointer method 1
+    cout << (*fptr2)(5.9,325.6) << endl; // invoke via function pointer method 2
+    cout << (*fptr3)(59.4,-10.3) << endl;
+
+    return 0;
+}
+*/
 
 /* const, const pointers
 #include <iostream>
