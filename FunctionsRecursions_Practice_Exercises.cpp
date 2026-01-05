@@ -42,7 +42,7 @@ int main() {
 }
 */
 
-/* Exercise 2: program to find maximum and minimum between two numbers using functions.
+/* Exercise 3: program to find maximum and minimum between two numbers using functions.
 
 #include <iostream>
 using namespace std;
@@ -62,7 +62,7 @@ int main() {
 }
 */
 
-/* Exercise 3: program to find power of any number using recursion.
+/* Exercise 4: program to find power of any number using recursion.
 
 #include <iostream>
 using namespace std;
@@ -80,8 +80,8 @@ int main() {
 }
 */
 
-/* Exercise 4: program to generate nth Fibonacci term using recursion.
-*/
+/* Exercise 5: program to generate nth Fibonacci term using recursion.
+
 #include <iostream>
 using namespace std;
 
@@ -97,14 +97,64 @@ int main() {
     cout << fibonacci(n);
     return 0;
 }
-// */
+*/
 
+/* Exercise 6: program to find sum of array elements using recursion.
 
+#include <iostream>
+using std::cout, std::cin, std::endl;
 
+int calcSum(int arr[], int start, int size) {
+    if (size == 0) return 0;
+    if (start == size - 1) return arr[start];
+    return (arr[start] + calcSum(arr, start+1, size));
+}
 
+int main() {
+    int n;
+    cin >> n;
+    int arr[n];
+    for (int i = 0; i < n; i++) cin >> arr[i];
+    int size = sizeof(arr) / sizeof(arr[0]);
+    cout << calcSum(arr, 0, size);
+    return 0;
+}
+*/
 
+/* Exercise 7: program to find maximum and minimum element in an array using recursion
 
+#include <iostream>
+using std::cout, std::cin, std::endl;
 
+int findMin(int arr[], int start, int size) {
+    if (size == 0) return 0;
+    if (size == 1) return arr[start];
+    if (start == size - 1) return arr[start];
+    int minX = findMin(arr, start + 1, size);
+    if (arr[start] < minX) return arr[start];
+    return minX;
+}
+
+int findMax(int arr[], int start, int size) {
+    if (size == 0) return 0;
+    if (size == 1) return arr[start];
+    if (start == size - 1) return arr[start];
+    int maxX = findMax(arr, start + 1, size);
+    if (arr[start] > maxX) return arr[start];
+    return maxX;
+}
+
+int main() {
+    int n;
+    cin >> n;
+    int arr[n];
+    for (int i = 0; i < n; i++) cin >> arr[i];
+    int max{0}, min{0};
+    cout << findMax(arr, 0, n) << endl << findMin(arr, 0, n) << endl;
+}
+*/
+
+/* Exercise 8:
 
 
 

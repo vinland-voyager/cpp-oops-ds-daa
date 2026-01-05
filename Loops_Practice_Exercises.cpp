@@ -258,9 +258,28 @@ int main() {
 }
 */
 
+/* Exercise 15: program to find maximum and minimum element in an array using loops
 
+#include <iostream>
+using std::cout, std::cin, std::endl;
 
-
+int main() {
+    int n;
+    cin >> n;
+    int arr[n];
+    int max {0}, min {0};
+    for (int i = 0; i < n; i++) cin >> arr[i];
+    if (n < 2) max = min = arr[0];
+    else {
+        for (int i = 0; i < n; i++) {
+            if (arr[i] > max) max = arr[i];
+            else if (arr[i] < min) min = arr[i];
+        }
+    }
+    cout << max << endl << min;
+    return 0;
+}
+*/
 
 
 
