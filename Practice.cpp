@@ -1,3 +1,35 @@
+/* Practice namespace creation
+#include <iostream>
+using namespace std;
+
+namespace add {
+    int Add(int a, int b) {
+        return a+b;
+    }
+    // Overloading
+    double Add(double a, double b) {
+        return a+b;
+    }
+    // inline
+    inline float Add(float a, float b) {
+        return a+b;
+    }
+}
+int main() {
+    int (*fptr1) (int a, int b) = add::Add; // fully qualified name
+    using namespace add; // opening the namespace from this point onwards
+    double (*fptr2) (double a, double b) = Add; // compiler will figure out the overloading even for function pointers.
+    float (*fptr3) (float a, float b) = add::Add;
+    using namespace std;
+    using namespace add;
+    cout << fptr1(5,6) << endl; // invoke via function pointer method 1
+    cout << (*fptr2)(5.9,325.6) << endl; // invoke via function pointer method 2
+    cout << (*fptr3)(59.4,-10.3) << endl;
+
+    return 0;
+}
+*/
+
 /* Practice function pointers, inline functions & function overloading
 
 #include <iostream>
